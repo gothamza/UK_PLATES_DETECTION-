@@ -1,0 +1,25 @@
+
+
+
+import easyocr
+
+reader = easyocr.Reader(['en'])
+
+# Test EasyOCR on a sample image
+image_path = 'Cars3.png'
+results = reader.readtext(image_path)
+
+# Find the longest recognized text
+longest_text = ''
+for result in results:
+    text = result[1]  # Get the recognized text
+    if len(text) > len(longest_text):
+        longest_text = text
+
+# Display only the characters with the longest recognized text
+for result in results:
+    text = result[1]  # Get the recognized text
+    if text == longest_text:
+        print(text)
+
+ 

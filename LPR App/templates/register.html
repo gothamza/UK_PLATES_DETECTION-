@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <h1>Registration</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="login-wrap p-4 p-md-5">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-user-o"></span>
+                </div>
+                <h3 class="text-center mb-4">Have an account?</h3>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input class="form-control rounded-left"  type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input class="form-control rounded-left"  type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="matriculation">Matriculation:</label>
+                        <input class="form-control rounded-left"  type="text" id="matriculation" name="matriculation" required>
+                    </div>
+
+                    <input class="btn btn-primary rounded submit p-3 px-5" type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

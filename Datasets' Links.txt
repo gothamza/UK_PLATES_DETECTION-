@@ -1,0 +1,12 @@
+1 st dataset that contains the images of different cars:
+
+https://www.kaggle.com/datasets/fazibnn/anprbyfazi
+
+2 nd dataet that contains cutted plates :
+
+https://www.kaggle.com/datasets/saadbinmunir/uk-licence-plate-synthetic-images
+
+
+
+
+
